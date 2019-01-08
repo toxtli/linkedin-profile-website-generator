@@ -1,0 +1,190 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	color: rgba(30, 34, 37, 1);
+	background-color: rgba(245, 246, 246, 1);
+}
+
+#Application {
+	height: 100%;
+}
+
+.Container {
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	width: 80%;
+	left: 10%;
+	background-color: rgba(255, 255, 255, 1);
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+#Header {
+
+}
+
+#Center {
+
+}
+
+#Footer {
+
+}
+
+.Section_Title {
+	font-weight: 500;
+}
+
+#Image_Profile {
+	position: relative;
+	display: inline-block;
+	border-radius: 50%;
+	margin: 20px;
+}
+
+#Profile_Data {
+	position: absolute;
+	display: inline-block;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#Profile_Name {
+	position: relative;
+	font-size: 48px;
+}
+
+#Profile_Title {
+	position: relative;
+	font-size: 16px;
+	margin-top: 10px;
+	color: rgba(149, 159, 171, 1);
+}
+
+#Profile_Description {
+	position: relative;
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+.Section {
+	margin: 20px;
+	width: calc(100% - 40px);
+	padding-bottom: 10px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.Section_Title {
+	width: 100%;
+	padding-top: 10px; 
+	padding-bottom: 10px; 
+	text-align: center;
+	font-size: 30px;
+	background-color: rgba(33, 150, 243, 1);
+	color: rgba(255, 255, 255, 1);
+	font-weight: 300;
+}
+
+.Section_Item {
+	margin: 20px;
+	width: calc(100% - 60px);
+	padding: 10px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.Section_Tag {
+	display: inline-block;
+	margin: 20px;
+	padding: 10px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.Section_Main {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.Section_Field {
+	margin-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: justify;
+    text-justify: inter-word;
+}
+
+.Section_Tag {
+
+}
+
+.Ribbon {
+	position: absolute; 
+	top: 60px; 
+	right: 0; 
+	border: 0;
+}
+
+.Card_Container {
+
+}
+
+.Card {
+	padding-left: 2%;
+	padding-right: 1%;
+	width: 30%;
+	display: inline-block;
+}
+
+.Card_Description {
+	overflow: hidden;
+    text-overflow: ellipsis;
+	max-height: 70px;
+}
+
+.Card_Image {
+	position: relative;
+	display: block;
+	width:100%;
+	height: 250px;
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	filter: contrast(1);
+}
+
+.Card_Image.animated {
+  -webkit-animation: filter-animation 5s infinite;
+}
+
+@-webkit-keyframes filter-animation {
+  0% {
+    -webkit-filter: contrast(1);
+  }
+  
+  50% {
+    -webkit-filter: contrast(2);
+  }
+  
+  100% {
+    -webkit-filter: contrast(1);
+  }
+}
+
+.toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
+  color: white; }
+
+.Top_Container {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+.Fixed {
+	 position:fixed !important
+}
