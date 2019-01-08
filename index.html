@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en" ng-app="Profile_App" ng-controller="Profile_Controller">
+    <head>
+        <title>Carlos Toxtli Official Website</title>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900,100' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+        <link rel="stylesheet" href="css/index.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
+        <script src="js/index.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-90861913-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+        <script type="text/javascript" src="http://feedjit.com/serve/?vv=1515&amp;tft=3&amp;dd=0&amp;wid=&amp;pid=0&amp;proid=0&amp;bc=FFFFFF&amp;tc=FFFFFF&amp;brd1=FFFFFF&amp;lnk=FFFFFF&amp;hc=FFFFFF&amp;hfc=FFFFFF&amp;btn=FFFFFF&amp;ww=160&amp;wne=1&amp;srefs=0"></script><noscript><a href="http://feedjit.com/">Live Traffic Stats</a></noscript>
+    </head>
+    <body>
+        <div class="Top_Container">
+            <md-toolbar md-scroll-shrink="" ng-if="true" class="md-hue-2 Fixed">
+              <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" aria-label="Settings" ng-click="openSideNavPanel()">
+                    <md-tooltip>Sections</md-tooltip>
+                  <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                </md-button>
+                <h2>
+                  <span>Carlos Toxtli Official Site</span>
+                </h2>
+                <span flex=""></span>
+                <md-button class="md-icon-button" aria-label="More" ng-click="openSideNavPanel()">
+                  <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+                </md-button>
+              </div>
+            </md-toolbar>
+
+
+            <md-sidenav class="md-sidenav-left md-whiteframe-z2 Fixed" md-component-id="left">
+                <md-toolbar layout="row">
+                 <div class="md-toolbar-tools">
+                    <h2>
+                      <span>Sections</span>
+                    </h2>
+                    <span flex></span>
+                    <md-button class="md-icon-button" aria-label="Close Side Panel" ng-click="closeSideNavPanel()">
+                      <md-tooltip>Close Sections</md-tooltip>
+                      <md-icon class="md-default-theme" class="material-icons">&#xE5CD;</md-icon>
+                    </md-button>
+                   </div>
+                </md-toolbar> 
+                <md-content layout-padding="">
+                  <md-list>
+                      <md-subheader class="md-no-sticky">Profile</md-subheader>
+                      <md-list-item  ng-if="data.EXPERIENCE" ng-click="closeSideNavPanel()" onclick="location.href='#EXPERIENCE';">
+                        <md-icon class="md-default-theme" class="material-icons">album</md-icon>
+                        <p>Experience</p>
+                        <div class="md-secondary">{{data.EXPERIENCE.length}}</div>
+                      </md-list-item>
+                      <md-list-item ng-if="data.EDUCATION" ng-click="closeSideNavPanel()" onclick="location.href='#EDUCATION';">
+                        <md-icon class="md-default-theme" class="material-icons">album</md-icon>
+                        <p>Education</p>
+                        <div class="md-secondary">{{data.EDUCATION.length}}</div>
+                        </a>
+                      </md-list-item>
+                      <md-list-item  ng-if="data.AWARDS" ng-click="closeSideNavPanel()" onclick="location.href='#AWARDS';">
+                        <md-icon class="md-default-theme" class="material-icons">album</md-icon>
+                        <p>Awards</p>
+                        <div class="md-secondary">{{data.AWARDS.length}}</div>
+                      </md-list-item>
+                      <md-list-item  ng-if="data.PUBLICATIONS" ng-click="closeSideNavPanel()" onclick="location.href='#PUBLICATIONS';">
+                        <md-icon class="md-default-theme" class="material-icons">album</md-icon>
+                        <p>Publications</p>
+                        <div class="md-secondary">{{data.PUBLICATIONS.length}}</div>
+                      </md-list-item>
+                      <md-list-item  ng-if="data.LANGUAGES" ng-click="closeSideNavPanel()" onclick="location.href='#LANGUAGES';">
+                        <md-icon class="md-default-theme" class="material-icons">album</md-icon>
+                        <p>Languages</p>
+                        <div class="md-secondary">{{data.LANGUAGES.length}}</div>
+                      </md-list-item>
+                      <md-list-item  ng-if="data.SKILLS" ng-click="closeSideNavPanel()" onclick="location.href='#SKILLS';">
+                        <md-icon class="md-default-theme" class="material-icons">album</md-icon>
+                        <p>Skills</p>
+                        <div class="md-secondary">{{data.SKILLS.length}}</div>
+                      </md-list-item>
+                      <md-list-item  ng-if="data.WEBSITES" ng-click="closeSideNavPanel()" onclick="location.href='#WEBSITES';">
+                        <md-icon class="md-default-theme" class="material-icons">album</md-icon>
+                        <p>Websites</p>
+                        <div class="md-secondary">{{data.WEBSITES.length}}</div>
+                      </md-list-item>
+                      <md-list-item  ng-if="data.PROJECTS" ng-click="closeSideNavPanel()" onclick="location.href='#PROJECTS';">
+                        <md-icon class="md-default-theme" class="material-icons">album</md-icon>
+                        <p>Projects</p>
+                        <div class="md-secondary">{{data.PROJECTS.length}}</div>
+                      </md-list-item>
+                      <md-list-item  ng-if="data.INTERESTS" ng-click="closeSideNavPanel()" onclick="location.href='#INTERESTS';">
+                        <md-icon class="md-default-theme" class="material-icons">album</md-icon>
+                        <p>Interests</p>
+                        <div class="md-secondary">{{data.INTERESTS.length}}</div>
+                      </md-list-item>
+                 </md-list>
+                </md-content> 
+            </md-sidenav>
+
+
+            <div id="Application">
+                <div class="Container" id="Header">
+                    <img src="{{data.IMAGE}}" id="Image_Profile">
+                    <div id="Profile_Data">
+                        <div id="Profile_Name">
+                            {{data.NAME}}
+                        </div>
+                        <div id="Profile_Title">
+                            {{data.TITLE}}
+                        </div>
+                        <div id="Profile_Description">
+                            {{data.SUMMARY}}
+                        </div>
+                        <div>
+                            This site was generated automatically using the information of <a href="https://www.linkedin.com/in/toxtli">my Linkedin profile</a> extracted by my <a href="https://github.com/toxtli/facebook-profile-scraper-bot">Linkedin Web Crawler</a> and arranged using Angular JS. Here is the <a href="https://github.com/toxtli/toxtli.github.io">Github repository</a> to generate your own static site hosted for free in <a href="https://pages.github.com/">Github Pages</a>. I wish it can be helpful for you as it is for me. Happy coding :)
+                        </div>
+                    </div>
+                </div>
+                <div class="Container" id="Center">
+                    <a name="EXPERIENCE"></a>
+                    <div ng-if="data.EXPERIENCE" class="Section">
+                        <div class="Section_Title">
+                            Experience
+                        </div>
+                        <div class="Card_Container">
+                            <div class="Card" ng-if="item.COMPANY" ng-repeat="item in data.EXPERIENCE">
+                                <md-card>
+                                    <md-card-header>
+                                      <md-card-avatar>
+                                        <img src="{{item.IMG}}"/>
+                                      </md-card-avatar>
+                                      <md-card-header-text>
+                                        <span class="md-title">{{item.COMPANY}}</span>
+                                        <span class="md-subhead">{{item.DATE}}</span>
+                                      </md-card-header-text>
+                                    </md-card-header>
+                                    <div style="background-image:url({{item.IMG}});" class="Card_Image" alt="Washed Out">
+                                    </div>
+                                    <md-card-title>
+                                      <md-card-title-text>
+                                        <span class="md-headline">{{item.TITLE}}</span>
+                                      </md-card-title-text>
+                                    </md-card-title>
+                                    <md-card-content>
+                                      <div class="Card_Description">
+                                        {{item.DESCRIPTION}}
+                                      </div>
+                                    </md-card-content>
+                                    <md-card-actions layout="column" layout-align="start">
+                                      <md-button onclick="toogleReadMore(this)">Read More</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                            </div>
+                        </div>
+                    </div>
+                    <a name="EDUCATION"></a>
+                    <div ng-if="data.EDUCATION" class="Section">
+                        <div class="Section_Title">
+                            Education
+                        </div>
+                        <div class="Card_Container">
+                            <div class="Card" ng-if="item.NAME" ng-repeat="item in data.EDUCATION">
+                                <md-card>
+                                    <md-card-header>
+                                      <md-card-avatar>
+                                        <img src="{{item.IMG}}"/>
+                                      </md-card-avatar>
+                                      <md-card-header-text>
+                                        <span class="md-title">{{item.NAME}}</span>
+                                        <span class="md-subhead">{{item.DATE}}</span>
+                                      </md-card-header-text>
+                                    </md-card-header>
+                                    <div style="background-image:url({{item.IMG}});" class="Card_Image" alt="Washed Out">
+                                    </div>
+                                    <md-card-title>
+                                      <md-card-title-text>
+                                        <span class="md-headline">{{item.DEGREE}}</span>
+                                      </md-card-title-text>
+                                    </md-card-title>
+                                    <md-card-content>
+                                      <div class="Card_Description">
+                                        {{item.DESCRIPTION}}
+                                      </div>
+                                    </md-card-content>
+                                    <md-card-actions layout="column" layout-align="start">
+                                      <md-button onclick="toogleReadMore(this)">Read More</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                            </div>
+                        </div>
+                    </div>
+                    <a name="AWARDS"></a>
+                    <div ng-if="data.AWARDS" class="Section">
+                        <div class="Section_Title">
+                            Awards
+                        </div>
+                        <div class="Card_Container">
+                            <div class="Card" ng-if="item.NAME" ng-repeat="item in data.AWARDS">
+                                <md-card>
+                                    <md-card-header>
+                                      <md-card-avatar>
+                                        <img src="img/AWARDS.png"/>
+                                      </md-card-avatar>
+                                      <md-card-header-text>
+                                        <span class="md-title">{{item.COMPANY}}</span>
+                                        <span class="md-subhead">{{item.DATE}}</span>
+                                      </md-card-header-text>
+                                    </md-card-header>
+                                    <div style="background-image:url('img/AWARDS.png');" class="Card_Image" alt="Washed Out">
+                                    </div>
+                                    <md-card-title>
+                                      <md-card-title-text>
+                                        <span class="md-headline">{{item.NAME}}</span>
+                                      </md-card-title-text>
+                                    </md-card-title>
+                                    <md-card-content>
+                                      <div class="Card_Description">
+                                        {{item.DESCRIPTION}}
+                                      </div>
+                                    </md-card-content>
+                                    <md-card-actions layout="column" layout-align="start">
+                                      <md-button onclick="toogleReadMore(this)">Read More</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                            </div>
+                        </div>
+                    </div>
+                    <a name="PUBLICATIONS"></a>
+                    <div ng-if="data.PUBLICATIONS" class="Section">
+                        <div class="Section_Title">
+                            Publications
+                        </div>
+                        <div class="Card_Container">
+                            <div class="Card" ng-if="item.NAME" ng-repeat="item in data.PUBLICATIONS">
+                                <md-card>
+                                    <md-card-header>
+                                      <md-card-avatar>
+                                        <img src="img/PUBLICATIONS.png"/>
+                                      </md-card-avatar>
+                                      <md-card-header-text>
+                                        <span class="md-title">{{item.PLACE}}</span>
+                                        <span class="md-subhead">{{item.DATE}}</span>
+                                      </md-card-header-text>
+                                    </md-card-header>
+                                    <div style="background-image:url('img/PUBLICATIONS.png');" class="Card_Image" alt="Washed Out">
+                                    </div>
+                                    <md-card-title>
+                                      <md-card-title-text>
+                                        <span class="md-headline">{{item.NAME}}</span>
+                                      </md-card-title-text>
+                                    </md-card-title>
+                                    <md-card-content>
+                                      <div class="Card_Description">
+                                        {{item.DESCRIPTION}}
+                                      </div>
+                                    </md-card-content>
+                                    <md-card-actions layout="column" layout-align="start">
+                                      <md-button onclick="toogleReadMore(this)">Read More</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                            </div>
+                        </div>
+                    </div>
+                    <a name="LANGUAGES"></a>
+                    <div ng-if="data.LANGUAGES" class="Section">
+                        <div class="Section_Title">
+                            Languages
+                        </div>
+                        <div class="Card_Container">
+                            <div class="Card" ng-if="item.NAME" ng-repeat="item in data.LANGUAGES">
+                                <md-card>
+                                    <md-card-header>
+                                      <md-card-avatar>
+                                        <img src="img/LANGUAGES.png"/>
+                                      </md-card-avatar>
+                                      <md-card-header-text>
+                                        <span class="md-title">{{item.NAME}}</span>
+                                        <span class="md-subhead"></span>
+                                      </md-card-header-text>
+                                    </md-card-header>
+                                    <div style="background-image:url('img/LANGUAGES.png');" class="Card_Image" alt="Washed Out">
+                                    </div>
+                                    <md-card-title>
+                                      <md-card-title-text>
+                                        <span class="md-headline">{{item.LEVEL}}</span>
+                                      </md-card-title-text>
+                                    </md-card-title>
+                                    <md-card-content>
+                                      <div class="Card_Description">
+                                        
+                                      </div>
+                                    </md-card-content>
+                                    <md-card-actions layout="column" layout-align="start">
+                                      <md-button>Read More</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                            </div>
+                        </div>
+                    </div>
+                    <a name="SKILLS"></a>
+                    <div ng-if="data.SKILLS" class="Section">
+                        <div class="Section_Title">
+                            Skills
+                        </div>
+                        <div class="Card_Container">
+                            <div class="Card" ng-if="item.NAME" ng-repeat="item in data.SKILLS">
+                                <md-card>
+                                    <md-card-header>
+                                      <md-card-avatar>
+                                        <img src="img/SKILLS.png"/>
+                                      </md-card-avatar>
+                                      <md-card-header-text>
+                                        <span class="md-title">{{item.NAME}}</span>
+                                        <span class="md-subhead"></span>
+                                      </md-card-header-text>
+                                    </md-card-header>
+                                    <div style="background-image:url('img/SKILLS.png');" class="Card_Image" alt="Washed Out">
+                                    </div>
+                                    <md-card-title>
+                                      <md-card-title-text>
+                                        <span class="md-headline">{{item.NAME}}</span>
+                                      </md-card-title-text>
+                                    </md-card-title>
+                                    <md-card-content>
+                                      <div class="Card_Description">
+                                      </div>
+                                    </md-card-content>
+                                    <md-card-actions layout="column" layout-align="start">
+                                      <md-button>Read More</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                            </div>
+                        </div>
+                    </div>
+                    <a name="WEBSITES"></a>
+                    <div ng-if="data.WEBSITES" class="Section">
+                        <div class="Section_Title">
+                            Websites
+                        </div>
+                        <div class="Card_Container">
+                            <div class="Card" ng-if="item.NAME" ng-repeat="item in data.WEBSITES">
+                                <md-card>
+                                    <md-card-header>
+                                      <md-card-avatar>
+                                        <img src="img/WEBSITES.png"/>
+                                      </md-card-avatar>
+                                      <md-card-header-text>
+                                        <span class="md-title">{{item.NAME}}</span>
+                                        <span class="md-subhead"></span>
+                                      </md-card-header-text>
+                                    </md-card-header>
+                                    <div style="background-image:url('img/WEBSITES.png');" class="Card_Image" alt="Washed Out">
+                                    </div>
+                                    <md-card-title>
+                                      <md-card-title-text>
+                                        <span class="md-headline">{{item.NAME}}</span>
+                                      </md-card-title-text>
+                                    </md-card-title>
+                                    <md-card-content>
+                                      <div class="Card_Description">
+                                        <a href="{{item.URL}}" target="_blank">
+                                            Link
+                                        </a>
+                                      </div>
+                                    </md-card-content>
+                                    <md-card-actions layout="column" layout-align="start">
+                                      <md-button>Read More</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                            </div>
+                        </div>
+                    </div>
+                    <a name="PROJECTS"></a>
+                    <div ng-if="data.PROJECTS" class="Section">
+                        <div class="Section_Title">
+                            Projects
+                        </div>
+                        <div class="Card_Container">
+                            <div class="Card" ng-if="item.NAME" ng-repeat="item in data.PROJECTS">
+                                <md-card>
+                                    <md-card-header>
+                                      <md-card-avatar>
+                                        <img src="img/PROJECTS.png"/>
+                                      </md-card-avatar>
+                                      <md-card-header-text>
+                                        <span class="md-title">{{item.NAME}}</span>
+                                        <span class="md-subhead"></span>
+                                      </md-card-header-text>
+                                    </md-card-header>
+                                    <div style="background-image:url('img/PROJECTS.png');" class="Card_Image" alt="Washed Out">
+                                    </div>
+                                    <md-card-title>
+                                      <md-card-title-text>
+                                        <span class="md-headline">{{item.NAME}}</span>
+                                      </md-card-title-text>
+                                    </md-card-title>
+                                    <md-card-content>
+                                      <div class="Card_Description">
+                                        {{item.DESCRIPTION}}
+                                      </div>
+                                    </md-card-content>
+                                    <md-card-actions layout="column" layout-align="start">
+                                      <md-button onclick="toogleReadMore(this)">Read More</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                            </div>
+                        </div>
+                    </div>
+                    <a name="INTERESTS"></a>
+                    <div ng-if="data.INTERESTS" class="Section">
+                        <div class="Section_Title">
+                            Interests
+                        </div>
+                        <div class="Card_Container">
+                            <div class="Card" ng-if="item.NAME" ng-repeat="item in data.INTERESTS">
+                                <md-card>
+                                    <md-card-header>
+                                      <md-card-avatar>
+                                        <img src="img/INTERESTS.png"/>
+                                      </md-card-avatar>
+                                      <md-card-header-text>
+                                        <span class="md-title">{{item.NAME}}</span>
+                                        <span class="md-subhead"></span>
+                                      </md-card-header-text>
+                                    </md-card-header>
+                                    <div style="background-image:url('img/INTERESTS.png');" class="Card_Image" alt="Washed Out">
+                                    </div>
+                                    <md-card-title>
+                                      <md-card-title-text>
+                                        <span class="md-headline">{{item.NAME}}</span>
+                                      </md-card-title-text>
+                                    </md-card-title>
+                                    <md-card-content>
+                                    </md-card-content>
+                                    <md-card-actions layout="column" layout-align="start">
+                                      <md-button>Read More</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/toxtli/toxtli.github.io">
+            <img class="Ribbon" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub">
+        </a>
+    </body>
+</html>
